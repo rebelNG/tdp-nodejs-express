@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Range Selection</title>
+</head>
+<body>
+    <h1>
+        <center>
+            You Have Selected: <%= number %>
+        </center>
+    </h1>
+        <center>
+                <%
+                    for(let r=10; r<=100; r+=10){
+                %>
+                        <a href="/selectRange/<%= r %>/<%= number %>">
+                            <%= r %>
+                        </a><br>      
+                <% } %>
+        </center>
+</body>
+</html>

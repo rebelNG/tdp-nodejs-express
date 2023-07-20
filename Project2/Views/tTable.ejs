@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Times Table</title>
+</head>
+<body>
+    <h1>
+        <center>
+            Times Table of: <%= T %>
+        </center>
+    </h1>
+        <center>
+            <% 
+                for (let a = 1; a<=R; a++) { 
+            %>
+                <%= T %> x <%= a %> = <%= T*a %> 
+                <br>
+        <% } %>
+        </center>
+</body>
+</html>
