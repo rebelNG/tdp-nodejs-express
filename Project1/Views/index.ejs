@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Times Table</title>
+</head>
+<body>
+    <center><h1>Select a Number</h1></center>
+
+    <%
+        for(let i=1; i<=10; i++){
+    %>
+            <a href="http://127.0.0.1:3000/timestable/<%= i %>">
+                <%= i %>
+            </a><br>      
+    <% } %>
+
+</body>
+</html>

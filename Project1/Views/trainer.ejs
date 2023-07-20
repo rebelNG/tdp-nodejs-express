@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TRAINERS</title>
+</head>
+<body>
+    <center><h1>Exam Details</h1></center>
+    <br>
+
+    <%
+        let total = phy + chem + math
+        let per = (total/450)*100
+        let result;
+        if(per <= 40){
+            result = 'You FAILED'
+        }else if (per > 40 && per <= 69){
+            result = 'Passed on Merit'
+        }else{
+            result = 'You Passed with Distinction'
+        }
+    %>
+    <table border="1">
+        <tr>
+            <td>Student's Name</td>
+            <td><%= sname %></td>
+        </tr>
+        
+        <tr>
+            <td>Physics</td>
+            <td><%= phy %></td>
+        </tr>
+        
+        <tr>
+            <td>Chemistry</td>
+            <td><%= chem %></td>
+        </tr>
+
+        <tr>
+            <td>Maths</td>
+            <td><%= math %></td>
+        </tr>
+
+        <tr>
+            <td>Total mark</td>
+            <td><%= total %></td>
+        </tr>
+
+        <tr>
+            <td>Percentage</td>
+            <td><%= per %></td>
+        </tr>
+        <%  if(per <= 40) { %>
+            <tr>
+                <td bgcolor="red">Result</td>
+                <td><%= result %></td>
+            </tr>
+        <% } else if (per > 40 && per <= 69){ %>
+            <tr>
+                <td bgcolor="yellow">Result</td>
+                <td><%= result %></td>
+            </tr>
+        <% } else { %>
+            <tr>
+                <td bgcolor="green">Result</td>
+                <td><%= result %></td>
+            </tr>
+        <% } %>
+        
+    </table>
+</body>
+</html>
